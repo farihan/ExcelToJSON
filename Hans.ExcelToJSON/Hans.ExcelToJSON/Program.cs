@@ -63,6 +63,7 @@ namespace Hans.ExcelToJSON
                         outFile.WriteLine("    \"{0}\": \"{1}\",", headers[i], item[i].ToString()
                             .Replace("\n", " ")
                             .Replace("\r", " ")
+                            .Replace("\"", " ")
                             .Trim());
                     }
                     else
@@ -70,6 +71,7 @@ namespace Hans.ExcelToJSON
                         outFile.WriteLine("    \"{0}\": \"{1}\"", headers[i], item[i].ToString()
                             .Replace("\n", " ")
                             .Replace("\r", " ")
+                            .Replace("\"", " ")
                             .Trim());
                     }
                 }
